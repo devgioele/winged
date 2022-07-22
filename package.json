@@ -37,7 +37,7 @@
     "esbuild": "0.14.43",
     "eslint": "8.20.0",
     "eslint-config-prettier": "8.5.0",
-    "eslint-plugin-github": "4.3.6",
+    "eslint-plugin-github": "4.3.7",
     "eslint-plugin-jest": "26.4.5",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "28.1.3",
