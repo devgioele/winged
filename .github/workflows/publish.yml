@@ -31,8 +31,10 @@ jobs:
         run: pnpm install
       - name: Test
         run: pnpm test
+      - name: Build
+        run: pnpm build
       - name: Set config for publishing
-        run: pnpm config set npmAuthToken $NPM_TOKEN
+        run: pnpm config set "//registry.npmjs.org/:_authToken" $NPM_TOKEN
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Publish
