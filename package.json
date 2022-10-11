@@ -19,15 +19,13 @@
   "files": [
     "dist"
   ],
-  "packageManager": "yarn@3.2.3",
   "scripts": {
     "lint": "eslint '**/*.ts' --cache --fix",
     "test": "rimraf __tests__/out && jest",
-    "build": "rimraf dist && yarn build:types & yarn build:cjs & yarn build:esm &",
+    "build": "rimraf dist && pnpm build:types & pnpm build:cjs & pnpm build:esm &",
     "build:cjs": "node ./esbuild.cjs.js",
     "build:esm": "node ./esbuild.esm.js",
-    "build:types": "tsc -p tsconfig.types.json",
-    "prepack": "yarn build"
+    "build:types": "tsc -p tsconfig.types.json"
   },
   "devDependencies": {
     "@swc/core": "1.2.218",

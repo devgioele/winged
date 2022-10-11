@@ -4,10 +4,10 @@ A blazingly fast GeoJSONL processor to group geographical features
 
 ## Install
 
-Using yarn:
+Using pnpm:
 
 ```sh
-yarn add @devgioele/winged
+pnpm add @devgioele/winged
 ```
 
 Using npm:
@@ -104,23 +104,5 @@ corepack enable
 ### Install dependencies
 
 ```sh
-yarn
+pnpm install
 ```
-
-### Releasing
-
-Whenever it is appropriate to increase the version number, run locally:
-
-```sh
-yarn version <version>
-```
-
-Replace `<version>` with one of the following:
-
-- major
-- minor
-- patch
-
-Then commit and push.
-
-For more information, see [the docs](https://yarnpkg.com/cli/version).

@@ -1,4 +1,3 @@
-import { test, expect } from '@jest/globals'
 import { groupFeatures } from '../src'
 import { allContainValidJson, findFile, lines, testDir } from './utils'
 
