@@ -54,13 +54,16 @@ export default class WritePool {
   async close(): Promise<string[]> {
     const closings = Object.values(this.writeStreams).map(async stream => {
       if (this.toGeoJson) {
-        // Remove comma from previous line
+        // Get last line
         const withCommaNewLine = stream.getBuffer(0)
+        // Remove comma and new line
         const withoutCommaNewLine = withCommaNewLine.substring(
           0,
           withCommaNewLine.length - 2
         )
+        // Add new line
         const withoutComma = `${withoutCommaNewLine}\n`
+        // Set line without comma
         stream.setBuffer(0, withoutComma)
         // Append end of GeoJSON
         stream.write(geojsonEnd)

@@ -47,11 +47,13 @@ const _groupFeatures: GroupingFunctionRequired = async (
   // Read multiple vector files concurrently
   const readings = vectorFiles.map(async file => {
     const lineReader = createLineReader(file.path, options.encoding)
-    /* Process each line
-    If some previous line processing triggered an abortion,
-    don't even start processing remanent lines */
+    // Process each line
     let abort = false
     lineReader.on('line', line => {
+      /* If some previous line processing triggered an abortion,
+       * don't start processing remaining lines.
+       * This is necessary, because once the line reader is closed upon abortion, there might still be some lines in the queue that are dispatched.
+       */
       if (abort) {
         return
       }
