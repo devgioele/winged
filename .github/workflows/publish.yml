@@ -7,6 +7,8 @@ on:
     paths:
       # There might be a new version to be published
       - package.json
+      # The lock file changed
+      - pnpm-lock.json
       # Tests changed and may pass now
       - __tests__/**/*
       # Samples used for testing changed
