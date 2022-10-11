@@ -22,7 +22,7 @@
   "scripts": {
     "lint": "eslint '**/*.ts' --cache --fix",
     "test": "rimraf __tests__/out && jest",
-    "build": "rimraf dist && pnpm build:types & pnpm build:cjs & pnpm build:esm &",
+    "build": "rimraf dist && pnpm build:types & pnpm build:cjs & pnpm build:esm",
     "build:cjs": "node ./esbuild.cjs.js",
     "build:esm": "node ./esbuild.esm.js",
     "build:types": "tsc -p tsconfig.types.json"
