@@ -1,7 +1,8 @@
 name: Publish to the NPM registry
 
 on:
-  workflow_dispath:
+  workflow_dispatch:
+
 #   push:
 #     branches:
 #      - main
