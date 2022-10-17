@@ -1,18 +1,19 @@
 name: Publish to the NPM registry
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      # There might be a new version to be published
-      - package.json
-      # The lock file changed
-      - pnpm-lock.json
-      # Tests changed and may pass now
-      - __tests__/**/*
-      # Samples used for testing changed
-      - samples/**/*
+  workflow_dispath:
+#   push:
+#     branches:
+#      - main
+#    paths:
+#      # There might be a new version to be published
+#      - package.json
+#      # The lock file changed
+#      - pnpm-lock.json
+#      # Tests changed and may pass now
+#      - __tests__/**/*
+#      # Samples used for testing changed
+#      - samples/**/*
 
 jobs:
   publish:
